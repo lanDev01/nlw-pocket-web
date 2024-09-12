@@ -26,7 +26,7 @@ export function Summary() {
   const firstDayOfWeek = dayjs().startOf('week').format('D MMM');
   const lastDayOfWeek = dayjs().endOf('week').format('D MMM');
 
-  const completedPercentage = Math.round(data.completed * 100) / data.total;
+  const completedPercentage = Math.round((data.completed / data.total) * 100);
 
   return (
     <div className="py-10 px-5 max-w-[480px] mx-auto flex flex-col gap-6">
